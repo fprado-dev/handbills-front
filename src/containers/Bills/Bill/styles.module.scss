@@ -1,0 +1,116 @@
+.bill {
+  background-color: #394b59;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.5rem;
+  padding-right: 3rem;
+  width: 90%;
+  position: relative;
+  padding: 0.8rem 0.8rem;
+  border-radius: 0.2rem;
+  min-height: 80px;
+  -webkit-box-shadow: 2px 2px 5px -2px rgba(66, 66, 66, 1);
+  -moz-box-shadow: 2px 2px 5px -2px rgba(66, 66, 66, 1);
+  box-shadow: 2px 2px 5px -2px rgba(66, 66, 66, 1);
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 2px;
+    background-color: #5bb290;
+  }
+  &__inner {
+    margin-left: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+  &__delete {
+    content: "";
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    border-radius: 50%;
+    height: 30px;
+    width: 30px;
+    padding-bottom: 0.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+    border: 1px solid #293742;
+    background-color: #394b59;
+    color: #dfe1df;
+    &:hover {
+      background-color: #dfe1df;
+      color: #394b59;
+    }
+  }
+  &__title {
+    font-size: 1.2rem;
+    color: #dfe1df;
+    margin: 0;
+  }
+  &__expire {
+    font-size: 0.85rem;
+    color: #dfe1df;
+  }
+  &__value {
+    color: #d8b722;
+    background-color: #293742;
+    padding: 5px 12px;
+  }
+  &__status {
+    position: absolute;
+    top: 50%;
+    left: -13px;
+    transform: translateY(-50%);
+    border-radius: 50%;
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+    border: 2px solid #5bb290;
+    height: 26px;
+    width: 26px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #293742;
+
+    span {
+      svg {
+        &:hover {
+          fill: darken(#5bb290, 10%);
+        }
+      }
+    }
+  }
+
+  &:hover {
+    background-color: darken(#394b59, 2%);
+    cursor: pointer;
+  }
+}
+
+.wrapperButton {
+  padding: 0.5rem;
+  &__content {
+    padding: 1rem 1.2rem;
+    button {
+      margin: 0 0.5rem;
+    }
+  }
+}
+
+@media all and (max-width: 775px) {
+  .bill {
+    width: 100%;
+  }
+}
